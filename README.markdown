@@ -14,7 +14,7 @@ Here's a screen shot of the three color coded tabs for an active project...
 
 ## Install
 
-Place session.scpt in your iTerm 2 application support scripts directory located at ~/Library/Application\ Support/iTerm/Scripts/ (create the directory if it's not present).
+Place Session.scpt in your iTerm 2 application support scripts directory located at ~/Library/Application\ Support/iTerm/Scripts/ (create the directory if it's not present).
 
 Edit the sample Foo.scpt script for your project (and user). In this example the Middleman static site generator is being used, and so the Middleman server is started, and Chrome is launched with the url for the server. Of course this could be a Rails server instead - or whatever. The sample is also launching MacVim as the editor but this could be changed to 'mate', 'sublime', 'mine' (for RubyMine) or whatever you like. If you don't have a server and don't require a browser session - just set these properties to double quoted empty strings.
 
