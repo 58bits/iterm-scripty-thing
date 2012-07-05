@@ -20,7 +20,7 @@ Edit the sample Foo.scpt script for your project (and user). In this example the
 
 The Session.scpt and Foo.scpt renamed to the name of your project (and with one created for each project you'd like to setup) will appear under the Script menu bar menu item for iTerm and can be launched from there (The Script menu bar item will appear when there are scripts in the Script directory).
 
-I've also add the project scripts to my Quicksilver catalog, and so can launch and switch between project sessions nippy-like.
+I also add the project scripts to my [Quicksilver](http://www.blacktree.com/) catalog, and so can launch and switch between project sessions easily.
 
 Enjoy.
 
