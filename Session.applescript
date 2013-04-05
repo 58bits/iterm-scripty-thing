@@ -7,20 +7,23 @@ property editor : missing value
 
 on start_session()
 	
+	-- A sample iTerm2 Applescript  
 	tell application "iTerm"
 		activate
+		-- close the first session 
+		-- terminate the first session of the first terminal
 		-- make a new terminal 
 		set myterm to (make new terminal)
 		-- talk to the new terminal 
 		tell myterm
 			
-			-- 1 create a red tab/session for the server
+			-- 1 create a red tab/session for the server (middleman, rails, whatever...)
 			set session1 to (launch session "Default Session")
 			-- talk to the session 
 			tell session1
-				-- set the name, tab color and change directory, launching the middleman server.
+				-- set the name, tab color and change directory to the server path.
 				set name to "Server"
-				write text "echo -e \"\\033]6;1;bg;red;brightness;225\\a\";echo -e \"\\033]6;1;bg;green;brightness;140\\a\";echo -e \"\\033]6;1;bg;blue;brightness;140\\a\"; cd " & server_path & "; clear;"
+				write text "echo -e \"\\033]6;1;bg;red;brightness;225\\a\";echo -e \"\\033]6;1;bg;green;brightness;140\\a\";echo -e \"\\033]6;1;bg;blue;brightness;140\\a\"; cd " & server_path & "; clear"
 				
 				if (server is not equal to "") then
 					write text server
@@ -46,7 +49,7 @@ on start_session()
 		
 	end tell
 	
-	-- Start MacVim in the source directory
+	-- Start the configured editor in the source directory
 	do shell script "cd " & source_path & "; " & editor & " > /dev/null 2>&1 "
 	
 	
